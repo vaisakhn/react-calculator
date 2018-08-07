@@ -1,19 +1,25 @@
-body {
-
+* {
+  box-sizing: border-box;
 }
 body{
   margin: 0;
   padding: 0;
   padding-top: 5%;
+  background-image: linear-gradient(to bottom right, #5cc8ff 0%, #d63c6b 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .main{
-  background-color: rgba(236, 18, 29, 0.733);
+  background-color: rgba(31, 20, 21);
   padding: 2%;
   margin: 0 auto;
-  max-width: 250px;
+  max-width: 350px;
   text-align: center;
   border: 8px solid;
-  border-radius: 10px;
+  border-radius: 14px;
+}
+.main h2{
+  color: white;
 }
 .key{
   margin-top: 4%;
@@ -30,22 +36,26 @@ body{
   height: 60px;
   border: 0;
   outline: 0;
+  background-color: rgba(31, 20, 21, 0.664);
+  color: #5cc8ff;
   
 }
 
 .orange{
-  border:  .25px rgb(236, 89, 4) solid;
+
   background-color: rgb(255, 94, 0);
   color: white;
 }
 .red{
-  border:  .25px rgb(223, 18, 18) solid;
-  background-color: red;
+  background-color: rgb(233, 48, 48);
   color: white;
   
 }
 input
 {
+  background-color: rgba(31, 20, 21, 0.959);
+  color: rgb(243, 75, 75);
+  font-size: 17px;
   border: 0;
   outline:0;
   padding-left: 4%;

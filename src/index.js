@@ -11,27 +11,42 @@ class Calculator extends React.Component {
         this.state = {
             value: '',
             result: '',
-            prev:''
+            prev: ''
         }
 
     }
+    // exp.test(this.state.value)
     storeParent = (data) => {
+        // var exp = /^[(0-9_)*]+[+,-,*,/]+[(0-9_)*]*$/
         if (data === "=") {
+            try{
+
             var e = eval(this.state.value);
-            this.setState({ result: "the result is " + e ,
-        prev: e});
-            this.setState({ value: '' });
+            this.setState({
+                result: "The result is " + e,
+                prev: e,
+                value: ''
+            });
+        }
+        catch(err){this.setState({
+            result:  "Invalid Expression",
+            value: ''
+        });}
+
+
         }
         else if (data === "AC") {
-            this.setState({ value: '',
-        result:'' });
+            this.setState({
+                value: '',
+                result: ''
+            });
         }
         else if (data === "C") {
             this.setState(prevState => ({
                 value: prevState.value.slice(0, -1)
             }));
         }
-        else if(data==="Prev"){
+        else if (data === "Prev") {
             this.setState(prevState => ({
                 value: prevState.value.concat(this.state.prev)
             }));
@@ -55,11 +70,11 @@ class Calculator extends React.Component {
     render() {
         return (
             <div>
-                <div class="main"><h1>CALCULATOR</h1>
+                <div className="main"><h2>CALCULATOR</h2>
                     <input value={this.state.value} placeholder="Enter expression" />
-                    <input value={this.state.result} placeholder="output" />
-                    <div class="key">
-                        <div class="ac">
+                    <input value={this.state.result}  />
+                    <div className="key">
+                        <div className="ac">
                             {this.drawButton('AC')}
                             {this.drawButton('C')}
                             {this.drawButton('Prev')}
