@@ -1,0 +1,54 @@
+body {
+
+}
+body{
+  margin: 0;
+  padding: 0;
+  padding-top: 5%;
+}
+.main{
+  background-color: rgba(236, 18, 29, 0.733);
+  padding: 2%;
+  margin: 0 auto;
+  max-width: 250px;
+  text-align: center;
+  border: 8px solid;
+  border-radius: 10px;
+}
+.key{
+  margin-top: 4%;
+}
+.ac button{
+  width: 33.333%;
+}
+.eq button{
+  width:100%;
+  font-size: 150%;
+}
+.square{
+  width: 25%;
+  height: 60px;
+  border: 0;
+  outline: 0;
+  
+}
+
+.orange{
+  border:  .25px rgb(236, 89, 4) solid;
+  background-color: rgb(255, 94, 0);
+  color: white;
+}
+.red{
+  border:  .25px rgb(223, 18, 18) solid;
+  background-color: red;
+  color: white;
+  
+}
+input
+{
+  border: 0;
+  outline:0;
+  padding-left: 4%;
+  width: 97%;
+  height: 30px;
+}
