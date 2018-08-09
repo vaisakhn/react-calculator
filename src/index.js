@@ -16,11 +16,12 @@ class Calculator extends React.Component {
 
     }
     // exp.test(this.state.value)
+   // var exp = /^[(0-9_)*]+[+,-,*,/]+[(0-9_)*]*$/
     storeParent = (data) => {
-        // var exp = /^[(0-9_)*]+[+,-,*,/]+[(0-9_)*]*$/
         if (data === "=") {
             try{
-
+                
+            // alert(parseInt(this.state.value.slice(0,!isNaN(data))));
             var e = eval(this.state.value);
             this.setState({
                 result: "The result is " + e,
@@ -29,7 +30,7 @@ class Calculator extends React.Component {
             });
         }
         catch(err){this.setState({
-            result:  "Invalid Expression",
+            result:  "Invalid Expression" +err,
             value: ''
         });}
 
@@ -52,6 +53,8 @@ class Calculator extends React.Component {
             }));
         }
         else {
+            // parseInt(this.state.value);
+
             this.setState(prevState => ({
                 value: prevState.value.concat(data)
             }));
@@ -85,8 +88,6 @@ class Calculator extends React.Component {
                             {this.drawButton(8)}
                             {this.drawButton(9)}
                             {this.drawButton('*')}
-
-
                         </div>
                         <div>
                             {this.drawButton(4)}
@@ -117,7 +118,6 @@ class Calculator extends React.Component {
     }
 }
 ReactDOM.render(
-
     <Calculator />,
     document.getElementById('root')
 );
