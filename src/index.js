@@ -72,7 +72,6 @@ class Calculator extends React.Component {
 
     render() {
         return (
-            <div>
                 <div className="main"><h2>CALCULATOR</h2>
                     <input value={this.state.value} placeholder="Enter expression" />
                     <input value={this.state.result}  />
@@ -112,7 +111,6 @@ class Calculator extends React.Component {
                         </div>
 
                     </div>
-                </div>
             </div>
         );
     }
